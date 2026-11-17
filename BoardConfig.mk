@@ -32,3 +32,6 @@ TARGET_VENDOR_PROP += $(DEVICE_PATH)/properties/vendor.prop
 
 # Screen density
 TARGET_SCREEN_DENSITY := 560
+
+# 允许 PRODUCT_COPY_FILES 拷贝 ELF（相册/编辑的 JNI 库需要装到 <app>/lib/arm64）
+BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true

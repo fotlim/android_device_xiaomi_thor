@@ -7,6 +7,9 @@
 # Inherit from thor device
 $(call inherit-product, device/xiaomi/thor/device.mk)
 
+# 移除 LineageOS 自带相机 Aperture（我们预装 MiuiCameraThor）
+PRODUCT_NO_CAMERA := false
+
 # Inherit from common lineage configuration
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
@@ -23,3 +26,6 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     SystemName=thor
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
+
+# 用小米相册(MiuiGallery)替代 LineageOS 自带相册：从 PRODUCT_PACKAGES 移除 Glimpse / Gallery2
+PRODUCT_PACKAGES := $(filter-out Glimpse Gallery2,$(PRODUCT_PACKAGES))

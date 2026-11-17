@@ -320,4 +320,6 @@
          black in software (to avoid aliasing or emulate a cutout that is not physically existent).
          -->
     <bool name="config_fillMainBuiltInDisplayCutout">true</bool>
+    <!-- 小米相册作为系统图库(SYSTEM_GALLERY 角色)默认持有者 -->
+    <string name="config_systemGallery" translatable="false">com.miui.gallery</string>
 </resources>

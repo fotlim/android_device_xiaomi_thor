@@ -1,0 +1,20 @@
+//
+// MiuiCamera 6.4 (patched) prebuilt for thor — maintainer: fotlim
+// presigned with its own key, kept exactly as released (zipaligned -p,
+// dex/so stored uncompressed). Replaces LineageOS Aperture as the
+// default camera app.
+//
+
+android_app_import {
+    name: "MiuiCameraThor",
+    owner: "fotlim",
+    apk: "MiuiCamera.apk",
+    presigned: true,
+    preprocessed: true,
+    dex_preopt: {
+        enabled: false,
+    },
+    overrides: [
+        "Camera2",
+    ],
+}
